@@ -8,3 +8,4 @@ c:\users\amagomedov\documents\visual studio 2013\Projects\ExcelCommentPaste\Comm
 c:\users\amagomedov\documents\visual studio 2013\Projects\ExcelCommentPaste\CommentsPaste\obj\Debug\CommentsPaste.csproj.GenerateResource.Cache
 c:\users\amagomedov\documents\visual studio 2013\Projects\ExcelCommentPaste\CommentsPaste\obj\Debug\CommentsPaste.dll
 c:\users\amagomedov\documents\visual studio 2013\Projects\ExcelCommentPaste\CommentsPaste\obj\Debug\CommentsPaste.pdb
+c:\users\amagomedov\documents\visual studio 2013\Projects\ExcelCommentPaste\CommentsPaste\obj\Debug\CommentsPaste.csprojResolveAssemblyReference.cache
