@@ -56,14 +56,18 @@ namespace CommentsPaste
                     {
                         foreach (var val in row)
                         {
-                            if (String.IsNullOrEmpty(val))
-                                continue;
-
                             cell = app.Cells[rowNum, colNum];
 
                             if (cell.Comment != null)
                             {
                                 cell.Comment.Delete();
+                            }
+
+                            if (String.IsNullOrEmpty(val))
+                            {
+                                colNum++;
+
+                                continue;
                             }
 
                             cell.AddComment(val);
