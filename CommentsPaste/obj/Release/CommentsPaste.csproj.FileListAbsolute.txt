@@ -1,0 +1,11 @@
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\bin\Release\CommentsPaste.dll
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\bin\Release\CommentsPaste.pdb
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\bin\Release\CommentsPaste.dll.manifest
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\bin\Release\CommentsPaste.vsto
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\obj\Release\CommentsPaste.csprojResolveAssemblyReference.cache
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\obj\Release\CommentsPaste.Properties.Resources.resources
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\obj\Release\CommentsPaste.csproj.GenerateResource.Cache
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\obj\Release\CommentsPaste.dll
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\obj\Release\CommentsPaste.pdb

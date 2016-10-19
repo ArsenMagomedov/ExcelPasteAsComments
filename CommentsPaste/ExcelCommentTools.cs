@@ -3,20 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
-using Microsoft.Office.Tools.Excel;
 
 namespace CommentsPaste
 {
 	public partial class ExcelCommentTools
 	{
-
-		private Office.CommandBarButton _pasteAsCommentButton;
-
-		private Office.CommandBarButton _copyCommentsButton;
+		//Saving all custom buttons created, because otherwise GC collects them
+		private List<Office.CommandBarButton> customButtonsList = new List<Office.CommandBarButton>();
 
 		private void ExcelCommentTools_Startup(object sender, EventArgs e)
 		{
@@ -29,11 +24,18 @@ namespace CommentsPaste
 		{
 			var cellbar = Application.CommandBars["Cell"];
 
-			_copyCommentsButton = (Office.CommandBarButton)cellbar.Controls.Add(Office.MsoControlType.msoControlButton, Missing.Value, Missing.Value, cellbar.Controls.Count, true);
-			_copyCommentsButton.Caption = caption;
-			_copyCommentsButton.BeginGroup = true;
-			_copyCommentsButton.Tag = caption;
-			_copyCommentsButton.Click += handler;
+			var button = (Office.CommandBarButton)cellbar.FindControl(Office.MsoControlType.msoControlButton, 0, "MYRIGHTCLICKMENU", Missing.Value, Missing.Value);
+
+			if (button != null)
+				return;
+
+			button = (Office.CommandBarButton)cellbar.Controls.Add(Office.MsoControlType.msoControlButton, Missing.Value, Missing.Value, cellbar.Controls.Count, true); ;
+			button.Caption = caption;
+			button.BeginGroup = true;
+			button.Tag = caption;
+			button.Click += handler;
+
+			customButtonsList.Add(button);
 		}
 
 		/// <summary>
@@ -134,7 +136,10 @@ namespace CommentsPaste
 
 					copiedString = copiedString.Trim('\t', '\n');
 
-					System.Windows.Forms.Clipboard.SetText(copiedString);
+					if (!String.IsNullOrWhiteSpace(copiedString))
+					{
+						System.Windows.Forms.Clipboard.SetText(copiedString);
+					}
 				}
 			}
 			catch (Exception ex)
