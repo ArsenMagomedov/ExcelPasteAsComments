@@ -15,9 +15,9 @@ namespace CommentsPaste
 
 		private void ExcelCommentTools_Startup(object sender, EventArgs e)
 		{
-			AddButtonToCellContextMenu("Paste as comments", PasteAsCommentButton_Click);
-
 			AddButtonToCellContextMenu("Copy comments", CopyCommentsButton_Click);
+
+			AddButtonToCellContextMenu("Paste as comments", PasteAsCommentButton_Click);
 		}
 
 		private void AddButtonToCellContextMenu(string caption, Office._CommandBarButtonEvents_ClickEventHandler handler)
@@ -80,7 +80,9 @@ namespace CommentsPaste
 								continue;
 							}
 
-							cell.AddComment(val);
+							var comment = val.Replace(@"\n", "\n").Replace(@"\t", "\t");
+
+							cell.AddComment(comment);
 
 							colNum++;
 						}
@@ -130,7 +132,7 @@ namespace CommentsPaste
 
 						if (comment != null)
 						{
-							copiedString += comment.Text;
+							copiedString += ((string) comment.Text).Replace("\n",@"\n").Replace("\t",@"\t");
 						}
 					}
 

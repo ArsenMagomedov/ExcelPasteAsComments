@@ -19,3 +19,4 @@ F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\bin\Debug\Microsoft.Office.Tool
 F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
 F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\obj\Debug\CommentsPaste.dll
 F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\obj\Debug\CommentsPaste.pdb
+F:\Temp\Excel\ExcelPasteAsComments\CommentsPaste\obj\Debug\CommentsPaste.csprojResolveAssemblyReference.cache
